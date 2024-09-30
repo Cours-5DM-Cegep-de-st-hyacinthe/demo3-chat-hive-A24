@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
-
+import 'package:hive_flutter/hive_flutter.dart';
 import 'vue/page_principale.dart';
 
-void main() {
+/* Commandes à rouler:
+*
+*  Flutter pub get
+*  flutter pub add hive hive_flutter
+8  flutter pub add hive_generator --dev build_runner --dev
+*/
+
+void main() async {
+  await Hive.initFlutter();
   runApp(const MainApp());
 }
 
